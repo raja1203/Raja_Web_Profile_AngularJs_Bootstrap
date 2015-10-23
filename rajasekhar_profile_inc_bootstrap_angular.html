@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Rajasekhar Reddy Neerubai's Profile</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+	<link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+</head>
+<body ng-app = 'myApp'>
+<script src="mymodule.js"></script>
+<script src="myvalues.js"></script>
+<script src="mydirectives.js"></script>
+<script src="mycontrollers.js"></script>
+
+
+	<div class = "container">
+		
+		<section>
+			<h2>Rajasekhar Reddy Neerubai's Profile</h2>
+			<address>
+		 		23-7-95/25, Santhi Nagar,<br>
+		 		M.R.Palli, Tirupati, 517502.<br>
+				<strong><span class = "glyph glyphicon-phone"> +91-90032 00301</span>      <span class="glyph glyphicon-envelope">  rajasekhar.neerubai@gmail.com  </span></strong><br>
+			</address>
+		</section>
+
+		<nav>
+			<ul class="nav nav-pills nav-justified" role="tablist" data-spy="affix-top">
+			    <li class="active"><a data-toggle = "pill" href="#home">About</a></li>
+			    <li><a data-toggle = "pill" href="#profsum">Professional Summary</a></li>
+				<li><a data-toggle = "pill" href="#achieve">Achievements</a></li>
+				<li><a data-toggle = "pill" href="#expr">Experience</a></li>
+				<li><a data-toggle = "pill" href="#train">Trainings</a></li>
+				<li><a data-toggle = "pill" href="#skillset">Skillset</a></li>
+		    </ul>
+		</nav>
+		<hr>
+			
+		<div class = "tab-content">
+			<div id = "home"  class = "tab-pane fade in active">
+				<home-page></home-page>		
+			</div> 
+
+			<div id = "profsum" class = "tab-pane fade">
+				<profile-summary></profile-summary>				 
+			</div>
+
+			<div id = "achieve" class ="tab-pane fade">
+				<achievements></achievements>				
+			</div>
+
+			<div id = "train" class ="tab-pane fade">
+				<training></training>
+			</div>
+
+			<div id = "skillset" class = "tab-pane fade">
+				<skill-set></skill-set>
+			</div>
+
+			<div id = "expr" class = "tab pane fade" ng-controller = "ExperienceController as exprCtrl">
+				<experience></experience>							
+			</div>
+		</div>
+	</div>
+</body>
+</html>
