@@ -9,25 +9,27 @@
 						<div class = "row">
 							<div class = 'col-md-6'>
 								<p><strong>Name of Organization : </strong><span ng-bind = "exprCtrl.selectCmpny.name"></span>
-									<span class = "lable label-info" ng-bind ="exprCtrl.selectCmpny.jobType"></span>
+ 									    <span ng-class = "{true : 'yellow' , false : 'blue'}[exprCtrl.selectCmpny.isRegular]"
+ 									    ng-bind ="exprCtrl.selectCmpny.jobType"> </span>
 								</p>
 							</div>
 							<div class = 'col-md-6'>
 								<p ng-hide = "exprCtrl.selectCmpny.isRegular">
-									Deployed by <span ng-bind = "exprCtrl.selectCmpny.parentCompany"></span> 
+									<b>Deployed by </b><span ng-bind = "exprCtrl.selectCmpny.parentCompany"></span> 
 								</p>
 							</div>
 						</div>						
 
 						<div class = 'row' >
 							<div class = 'col-md-6'>
-								<p><strong>Period : </strong><span ng-bind = "exprCtrl.selectCmpny.period"></span></p>
+								<p><strong>Designation : </strong><span ng-bind = "exprCtrl.selectCmpny.designation"></span></p>
+								
 							</div>
 							<div class ='col-md-3'>
 								<p><strong>Base Location : </strong><span ng-bind = "exprCtrl.selectCmpny.baseLocation"></span></p>
 							</div>
 							<div class = 'col-md-3'>
-								<p><strong>Designation : </strong><span ng-bind = "exprCtrl.selectCmpny.designation"></span></p>
+								<p><strong>Period : </strong><span ng-bind = "exprCtrl.selectCmpny.period"></span></p>
 							</div>
 						</div>
 
